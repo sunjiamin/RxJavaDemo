@@ -1,34 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+
+    android:orientation="vertical"
     tools:context="com.jojo.jiaminsun.rxjavademo.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+              />
 
-    </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+    <com.jojo.jiaminsun.rxjavademo.MyHoveringScrollView
 
-</android.support.design.widget.CoordinatorLayout>
+        android:id="@+id/view_hover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:text="这是头部"
+                android:gravity="center"
+                />
+
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:id="@+id/top"
+                >
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:background="#AAff0000"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="16sp"
+                        android:text="这是固定部分"
+                        />
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="点我一下"
+                        android:id="@+id/btn"
+                        />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n内容\n"
+                />
+
+        </LinearLayout>
+    </com.jojo.jiaminsun.rxjavademo.MyHoveringScrollView>
+
+
+
+
+</LinearLayout>
